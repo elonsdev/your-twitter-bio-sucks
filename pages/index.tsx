@@ -23,7 +23,7 @@ import {
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState(
-    "I build pretty things in web3.  Software & Developer Relations Engineer 👉 @addUTILITI"
+    "I build pretty things online and like hiking in my spare time."
   );
   const [platform, setPlatform] = useState("Twitter");
   const [vibe, setVibe] = useState<VibeType>("Professional");
