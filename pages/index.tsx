@@ -153,7 +153,6 @@ const Home: NextPage = () => {
               setPlatform={(newPlatform) => setPlatform(newPlatform)}
             />
           </div>
-
           <div className='flex mt-10 items-center space-x-3'>
             <TbSquareRoundedNumber2Filled size={50} />
             <p className='text-left font-medium'>

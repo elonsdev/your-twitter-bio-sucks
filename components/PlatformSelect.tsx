@@ -40,7 +40,7 @@ export default function PlatformSelect({
   };
   return (
     <>
-      <div className='flex justify-between items-center mt-10 md:text-4xl lg:text-5xl'>
+      <div className='flex flex-wrap gap-5 md:gap-2 lg:gap-1 justify-between items-center mt-10 md:text-4xl lg:text-5xl'>
         <div
           className={`p-2 rounded-full cursor-pointer ${
             selected == "Twitter" && "ring-2 ring-black "
