@@ -65,7 +65,8 @@ const Home: NextPage = () => {
         platform == "Twitch" && "from-purple-100 via-purple-300 to-purple-500"
       } ${platform == "Facebook" && "from-blue-300 via-blue-500 to-blue-700"} ${
         platform == "Tumblr" && "from-green-100 via-green-300 to-green-500"
-      }  from-yellow-100 via-yellow-300 to-yellow-500`}
+      }  
+      `}
     >
       <Head>
         <title>Your Twitter Bio Sucks | @elonsdev tools</title>
