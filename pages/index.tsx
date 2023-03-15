@@ -120,7 +120,7 @@ const Home: NextPage = () => {
       <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20 '>
         <h1 className='flex items-center sm:text-6xl text-4xl max-w-4xl font-bold text-black'>
           Your{" "}
-          <span className='w-[320px]'>
+          <span className='w-[320px] hidden md:block'>
             <Typewriter
               options={{
                 strings: [
