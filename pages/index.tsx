@@ -11,21 +11,24 @@ import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 import ResizablePanel from "../components/ResizablePanel";
 import Link from "next/link";
+import Typewriter from "typewriter-effect";
+import PlatformSelect from "../components/PlatformSelect";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState(
     "I build pretty things in web3.  Software & Developer Relations Engineer 👉 @addUTILITI"
   );
+  const [platform, setPlatform] = useState("Twitter");
   const [vibe, setVibe] = useState<VibeType>("Professional");
   const [generatedBios, setGeneratedBios] = useState("");
 
   const prompt =
     vibe === "Funny"
-      ? `Generate a funny twitter bios with no hashtags. Make sure there is a joke in there and it's a little ridiculous. Make sure the generated bio is at max 20 words and base it on this context: ${bio}${
+      ? `Generate a funny ${platform} bio with no hashtags. Make sure there is a joke in there and it's a little ridiculous. Make sure the generated bio is at max 20 words and base it on this context: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`
-      : `Generate a ${vibe} twitter bios with no hashtags. Make sure the generated bio is at least 14 words and at max 20 words and base it on this context: ${bio}${
+      : `Generate a ${vibe} ${platform} bio with no hashtags. Make sure the generated bio is at least 14 words and at max 20 words and base it on this context: ${bio}${
           bio.slice(-1) === "." ? "" : "."
         }`;
 
@@ -51,7 +54,19 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className='flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen '>
+    <div
+      className={`flex  mx-auto flex-col items-center justify-center py-2 min-h-screen bg-gradient-to-r ${
+        platform == "Twitter" && "from-blue-100 via-blue-300 to-blue-500"
+      } ${platform == "YouTube" && "from-red-100 via-red-300 to-red-500"} ${
+        platform == "Instagram" && "from-rose-100 via-rose-300 to-rose-500"
+      } ${platform == "LinkedIn" && "from-sky-100 via-sky-300 to-sky-500"} ${
+        platform == "TikTok" && "from-indigo-100 via-indigo-300 to-indigo-500"
+      } ${platform == "Tinder" && "from-pink-100 via-pink-300 to-pink-500"} ${
+        platform == "Twitch" && "from-purple-100 via-purple-300 to-purple-500"
+      } ${platform == "Facebook" && "from-blue-300 via-blue-500 to-blue-700"} ${
+        platform == "Tumblr" && "from-green-100 via-green-300 to-green-500"
+      }  from-yellow-100 via-yellow-300 to-yellow-500`}
+    >
       <Head>
         <title>Your Twitter Bio Sucks | @elonsdev tools</title>
         <link rel='icon' href='/favicon.ico' />
@@ -95,12 +110,49 @@ const Home: NextPage = () => {
         <meta property='twitter:image' content='/og.png'></meta>
       </Head>
 
-      <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20'>
-        <h1 className='sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900'>
-          Your Twitter Bio Sucks!
+      <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20 '>
+        <h1 className='flex items-center sm:text-6xl text-4xl max-w-4xl font-bold text-slate-900'>
+          Your{" "}
+          <span className='w-[320px]'>
+            <Typewriter
+              options={{
+                strings: [
+                  "Twitter",
+                  "YouTube",
+                  "Instagram",
+                  "LinkedIn",
+                  "TikTok",
+                  "Tinder",
+                  "Twitch",
+                  "Facebook",
+                  "Tumblr",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>{" "}
+          Bio Sucks!
         </h1>
 
         <div className='max-w-7xl lg:w-[600px]'>
+          <div className='flex mt-10 items-center space-x-3'>
+            <Image
+              src='/1-black.png'
+              width={30}
+              height={30}
+              alt='1 icon'
+              className='mb-5 sm:mb-0'
+            />
+            <p className='text-left font-medium'>Choose your platform.</p>
+          </div>
+          <div className='block'>
+            <PlatformSelect
+              platform={platform}
+              setPlatform={(newPlatform) => setPlatform(newPlatform)}
+            />
+          </div>
+
           <div className='flex mt-10 items-center space-x-3'>
             <Image
               src='/1-black.png'

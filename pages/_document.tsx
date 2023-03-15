@@ -6,15 +6,12 @@ class MyDocument extends Document {
       <Html lang='en'>
         <Head>
           <link rel='icon' href='/favicon.ico' />
-          <title>Your Twitter Bio Sucks | @elonsdev tools</title>
+          <title>Your Bio Sucks | @elonsdev tools</title>
           <link rel='icon' href='/favicon.ico' />
-          <meta
-            name='title'
-            content='Your Twitter Bio Sucks | @elonsdev tools'
-          ></meta>
+          <meta name='title' content='Your Bio Sucks | @elonsdev tools'></meta>
           <meta
             name='description'
-            content='Create a better twitter bio in 2 steps with the help of AI.'
+            content='Create a better bio in 2 steps with the help of AI.'
           ></meta>
 
           <meta property='og:type' content='website'></meta>
@@ -24,11 +21,11 @@ class MyDocument extends Document {
           ></meta>
           <meta
             property='og:title'
-            content='Your Twitter Bio Sucks | @elonsdev tools'
+            content='Your Bio Sucks | @elonsdev tools'
           ></meta>
           <meta
             property='og:description'
-            content='Create a better twitter bio in 2 steps with the help of AI.'
+            content='Create a better bio in 2 steps with the help of AI.'
           ></meta>
           <meta property='og:image' content='/og.png'></meta>
 
@@ -39,11 +36,11 @@ class MyDocument extends Document {
           ></meta>
           <meta
             property='twitter:title'
-            content='Your Twitter Bio Sucks | @elonsdev tools'
+            content='Your Twitter Sucks | @elonsdev tools'
           ></meta>
           <meta
             property='twitter:description'
-            content='Create a better twitter bio in 2 steps with the help of AI.'
+            content='Create a better bio in 2 steps with the help of AI.'
           ></meta>
         </Head>
         <body>
