@@ -14,6 +14,12 @@ import Link from "next/link";
 import Typewriter from "typewriter-effect";
 import PlatformSelect from "../components/PlatformSelect";
 
+import {
+  TbSquareRoundedNumber1Filled,
+  TbSquareRoundedNumber2Filled,
+  TbSquareRoundedNumber3Filled,
+} from "react-icons/tb";
+
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState(
@@ -112,7 +118,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20 '>
-        <h1 className='flex items-center sm:text-6xl text-4xl max-w-4xl font-bold text-slate-900'>
+        <h1 className='flex items-center sm:text-6xl text-4xl max-w-4xl font-bold text-black'>
           Your{" "}
           <span className='w-[320px]'>
             <Typewriter
@@ -138,13 +144,7 @@ const Home: NextPage = () => {
 
         <div className='max-w-7xl lg:w-[600px]'>
           <div className='flex mt-10 items-center space-x-3'>
-            <Image
-              src='/1-black.png'
-              width={30}
-              height={30}
-              alt='1 icon'
-              className='mb-5 sm:mb-0'
-            />
+            <TbSquareRoundedNumber1Filled size={50} />
             <p className='text-left font-medium'>Choose your platform.</p>
           </div>
           <div className='block'>
@@ -155,13 +155,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className='flex mt-10 items-center space-x-3'>
-            <Image
-              src='/1-black.png'
-              width={30}
-              height={30}
-              alt='1 icon'
-              className='mb-5 sm:mb-0'
-            />
+            <TbSquareRoundedNumber2Filled size={50} />
             <p className='text-left font-medium'>
               Copy your current bio{" "}
               <span className='text-slate-500'>(or steal someone's)</span>.
@@ -177,7 +171,7 @@ const Home: NextPage = () => {
             }
           />
           <div className='flex mb-5 items-center space-x-3'>
-            <Image src='/2-black.png' width={30} height={30} alt='1 icon' />
+            <TbSquareRoundedNumber3Filled size={50} />
             <p className='text-left font-medium'>Select your vibe.</p>
           </div>
 
